@@ -1,9 +1,9 @@
 from openai import OpenAI
 import streamlit as st
 
-openai_key = st.secrets('OPENAI_KEY')
+openai_key = st.secrets['OPENAI_KEY']
 
-client = OpenAI(api_key="")
+client = OpenAI(api_key=openai_key)
 
 def gpt_wrapper_message(prompt):  
     completion = client.chat.completions.create(
